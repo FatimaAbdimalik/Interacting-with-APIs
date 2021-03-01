@@ -1,4 +1,4 @@
-# Frontend for Lyrics API tech test
+# Frontend for Interacting with API
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
