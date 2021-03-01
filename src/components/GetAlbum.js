@@ -11,7 +11,6 @@ const GetAlbum = ({ artist, token, value }) => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setAlbums(data);
       });
   }, [artist.artists.items[0].id]);

@@ -33,3 +33,8 @@ button {
 .song-name {
   font-family: "Reggae One", cursive;
 }
+
+.number {
+  font-size: 30px;
+  color: red;
+}

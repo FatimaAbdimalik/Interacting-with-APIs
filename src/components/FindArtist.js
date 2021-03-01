@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import GetAlbum from "./GetAlbum";
 const FindArtist = ({ value, token }) => {
-  console.log(value);
   const [artist, setArtist] = useState();
 
   useEffect(() => {

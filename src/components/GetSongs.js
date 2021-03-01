@@ -9,7 +9,6 @@ const GetSongs = ({ albums, token, value }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setSongs(data);
       });
   }, [albums.items[0].id]);

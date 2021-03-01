@@ -8,13 +8,10 @@ const SearchField = () => {
   const [value, setValue] = useState("");
   const [token, setToken] = useState("");
 
-  console.log(value);
-
   const getToken = async () => {
     fetch(`https://spotify-api-feb.herokuapp.com/token`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.access_token);
         setToken(data.access_token);
       });
   };
