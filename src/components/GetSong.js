@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
+import Loader from "react-loader-spinner";
+
 const GetSong = ({ songs, value }) => {
   const [lyrics, setLyrics] = useState();
 
@@ -34,8 +36,15 @@ const GetSong = ({ songs, value }) => {
       {" "}
       The number of words in the song{" "}
       <span className="song-name">{title} </span> {""}
-      are {""} {""}{" "}
-      {lyrics ? getLyricsWordCount(lyrics) : " getting calculated"}
+      is {""} {""}{" "}
+      {lyrics ? (
+        getLyricsWordCount(lyrics)
+      ) : (
+        <span>
+          {" "}
+          <Loader type="Circles" color="#00BFFF" height={20} width={20} />{" "}
+        </span>
+      )}
     </div>
   );
 };
