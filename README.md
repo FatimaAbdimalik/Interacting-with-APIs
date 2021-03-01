@@ -23,7 +23,7 @@ Link of the live app is https://interacting-with-api.netlify.app/
 1. clone the repository: https://github.com/FatimaAbdimalik/Interacting-with-APIs.git 
 2. Navigate into the repository and then cd Interacting-with-APIs
 3. use code . to open in VS code.
-4. install dependencies npm install 
+4. install dependencies using npm install 
 5. run locally using npm start
 
  
