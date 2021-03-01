@@ -6,6 +6,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## User Story:
 There is a search field provided, users can search for their faviourate artist. The app then will provide the number of words of a chosen song. 
 
+
+
+## tech used:
+  React
+  Spotify API
+  Lyrics.ovh
+
 ## Available Scripts
 
 In the project directory, you can run:
