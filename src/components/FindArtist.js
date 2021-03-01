@@ -3,7 +3,7 @@ import GetAlbum from "./GetAlbum";
 const FindArtist = ({ value }) => {
   console.log(value);
   const [token, setToken] = useState(
-    "BQCvmk_jNVNzZq6yEcpYN0WYDiDQS7WQ9j-S4FSzZ14C6QcE9mXhOOQtmNn9uWf9w71wBPN7VcxR6TvuICPUcAeIVX3v1kKedRqxiSD5bXisjnv8dN2NkuS39fcYnCWbkn9HsuSdIObzy0N_tVbkl4UbHYP_K7q0BH3j"
+    "BQCh3ilfMLHmh38W0_tWCHDbtz_FOtro-cbMM4KArRy_huoU2P6fMX1tSnx9D8azcP9Sp2XdxWmw9QP-VCzOrT5NYbmoSyhZpkoMEREbhKhirZehsJFbqtfAPOfGa2y2U5bT5qP2Sk2PRBqyG2nC99wcZ3DQMUcZ8CGx"
   );
   const [artist, setArtist] = useState();
 
