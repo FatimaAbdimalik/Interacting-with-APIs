@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./Home.css";
 import Loader from "react-loader-spinner";
 
-const GetSong = ({ songs, value }) => {
-  const [lyrics, setLyrics] = useState();
+const GetSong = ({ songs, value, initial }) => {
+  const [lyricsCount, setLyricsCount] = useState(initial);
+  const [songValue, setSongValue] = useState(value);
 
   let title = songs.items[0].name;
 
@@ -23,11 +24,20 @@ const GetSong = ({ songs, value }) => {
   };
 
   useEffect(() => {
+    if (songValue !== value) {
+      setLyricsCount(0);
+    }
+  }, [value]);
+
+  useEffect(() => {
     fetch(`https://api.lyrics.ovh/v1/${value}/${title}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setLyrics(data);
+
+        let result = getLyricsWordCount(data);
+
+        setLyricsCount(result);
       });
   }, [value, title]);
 
@@ -37,8 +47,8 @@ const GetSong = ({ songs, value }) => {
       The number of words in the song{" "}
       <span className="song-name">{title} </span> {""}
       is {""} {""}{" "}
-      {lyrics ? (
-        getLyricsWordCount(lyrics)
+      {lyricsCount > 0 ? (
+        lyricsCount
       ) : (
         <span>
           {" "}

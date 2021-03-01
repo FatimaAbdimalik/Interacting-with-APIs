@@ -1,11 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import FindArtist from "./FindArtist";
+import "./Home.css";
 
 const SearchField = () => {
   const [text, setText] = useState("");
   const [value, setValue] = useState("");
+  const [token, setToken] = useState("");
+
   console.log(value);
+
+  const getToken = async () => {
+    fetch(`https://spotify-api-feb.herokuapp.com/token`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data.access_token);
+        setToken(data.access_token);
+      });
+  };
+
+  useEffect(() => {
+    if (token === "") {
+      getToken();
+    }
+  }, []);
 
   const submitForm = () => {
     setValue(text);
@@ -31,7 +49,7 @@ const SearchField = () => {
           </Col>
         </Row>
       </Form>
-      <div>{value ? <FindArtist value={value} /> : null}</div>
+      <div>{value ? <FindArtist value={value} token={token} /> : null}</div>
     </div>
   );
 };

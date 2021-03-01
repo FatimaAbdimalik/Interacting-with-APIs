@@ -15,7 +15,9 @@ const GetSongs = ({ albums, token, value }) => {
   }, [albums.items[0].id]);
   return (
     <div>
-      {songs ? <GetSong songs={songs} token={token} value={value} /> : null}
+      {songs ? (
+        <GetSong songs={songs} token={token} value={value} initial={0} />
+      ) : null}
     </div>
   );
 };
