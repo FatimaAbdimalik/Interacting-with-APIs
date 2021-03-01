@@ -32,7 +32,7 @@ const GetSong = ({ songs, value, initial }) => {
 
   useEffect(() => {
     fetchWithTimeout(`https://api.lyrics.ovh/v1/${value}/${title}`, {
-      timeout: 3000,
+      timeout: 30000,
     })
       .then((res) => res.json())
       .then((data) => {
