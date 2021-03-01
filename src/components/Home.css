@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
+.text {
+  padding: 20px;
+  font-family: "Akaya Telivigala", cursive;
+  color: aliceblue;
+  font-size: 30px;
+}
+
+.image {
+  border-radius: 5px;
+}
+
+.exp {
+  padding: 20px;
+  font-family: "Akaya Telivigala", cursive;
+  color: aliceblue;
+}
+
+.result {
+  padding: 20px;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+}
+
+button {
+  margin-left: 5px;
+  color: white;
+  background-color: #363e90;
+  padding: 2px;
+}
+
+.song-name {
+  font-family: "Reggae One", cursive;
+}
