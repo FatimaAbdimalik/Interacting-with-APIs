@@ -9,9 +9,13 @@ There is a search field provided, users can search for their faviourate artist. 
 
 
 ## tech used:
-  React
-  Spotify API
+  React, 
+  Spotify API and
   Lyrics.ovh
+
+## Demo:
+
+Link of the live app is https://interacting-with-api.netlify.app/ 
 
 ## Available Scripts
 
